@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memory Game with Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Memory Game</h1>
+    <div class="controls">
+      <select id="level" class="btn">
+        <option value="4">Level: 4x4</option>
+        <option value="6">Level: 6x6</option>
+        <option value="8">Level: 8x8</option>
+      </select>
+      <select id="theme" class="btn">
+        <option value="emoji">Theme: Emoji</option>
+        <option value="fruits">Theme: Fruits</option>
+        <option value="animals">Theme: Animals</option>
+      </select>
+      <button id="restart" class="btn">Restart</button>
+    </div>
+    <div class="stats">
+      <div>Moves: <span id="moves">0</span></div>
+      <div>Time: <span id="timer">00:00</span></div>
+    </div>
+  </header>
+
+  <div id="board" class="board"></div>
+
+  <section class="leaderboard">
+    <h2>🏆 Leaderboard</h2>
+    <table>
+      <thead><tr><th>Level</th><th>Theme</th><th>Best Time</th><th>Moves</th><th>Stars</th></tr></thead>
+      <tbody id="leaderboard-body"></tbody>
+    </table>
+  </section>
+
+  <footer>⭐ Score = Stars + Time Bonus • Results saved locally</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
